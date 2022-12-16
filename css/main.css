@@ -7,7 +7,6 @@
 .box {
   background: #fff;
   border: 1px solid #dcdcdc;
-  padding: 15px;
 }
 
 a {
@@ -19,7 +18,7 @@ a {
 .header {
   display: flex;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 100px;
   border-bottom: 1px solid #dcdcdc;
   height: 80px;
 }
@@ -151,7 +150,7 @@ a {
 }
 
 .header .header_etc .search input:focus {
-  width: 180px;
+  width: 100px;
 }
 
 .header .header_etc .search input:focus ~ i {
@@ -192,6 +191,7 @@ a {
 
 .mainBanner .right .login {
   margin: 15px 0;
+  padding: 10px;
 }
 .mainBanner .right .login p {
   display: flex;
@@ -288,7 +288,7 @@ a {
 
 .mainMenu {
   position: relative;
-  z-index: 999;
+  z-index: 99;
 }
 
 .mainMenu .tab_container {
@@ -463,11 +463,31 @@ a {
   background: #f6fbfd;
 }
 
-.mainInfo .notice {
-  width: 480px;
+.mainInfo .inner {
+  display: grid;
+  grid-template-rows: 70px 150px 70px;
+  grid-template-columns: 440px 440px 280px;
+  gap: 20px;
+  padding: 20px 0;
+}
 
-  padding: 0;
+.mainInfo .notice {
+  width: 440px;
   border-top: none;
+}
+
+.mainInfo .notice01 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.mainInfo .notice02 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .mainInfo .notice .notice_tab {
@@ -479,7 +499,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 110px;
+  width: 100px;
   border-top: 1px solid #dcdcdc;
   border-bottom: 1px solid #dcdcdc;
 }
@@ -510,7 +530,7 @@ a {
   width: 40px;
 }
 .mainInfo .notice .con_wrap {
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .mainInfo .notice .notice_con {
@@ -527,7 +547,6 @@ a {
 .mainInfo .notice .content ul {
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 
 .mainInfo .notice .content li {
@@ -538,11 +557,263 @@ a {
 }
 
 .mainInfo .notice .content li a {
-  width: 350px;
+  width: 300px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .mainInfo .info_box01 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.mainInfo .info_box01 a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+}
+
+.mainInfo .info_box01 img {
+  height: 55px;
+}
+
+.mainInfo .info_box01 strong {
+  font-size: 23px;
+  font-weight: 400;
+  color: #dc3545;
+}
+
+.mainInfo .info-box02 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  font-size: 14px;
+}
+
+.mainInfo .info-box02 ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainInfo .info-box02 .half {
+  width: 50%;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.mainInfo .info-box02 .all {
+  width: 100%;
+}
+
+.mainInfo .info-box02 .all a {
+  justify-content: space-between;
+}
+
+.mainInfo .info-box02 li:first-child {
+  border-right: 1px solid #dcdcdc;
+}
+
+.mainInfo .info-box02 li:last-child {
+  border-top: 1px solid #dcdcdc;
+}
+
+.mainInfo .info-box02 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.mainInfo .go {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.mainInfo .go span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #0f4c94;
+}
+
+.mainInfo .go ul {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.mainInfo .go li {
+  position: relative;
+}
+
+.mainInfo .go li ~ li::before {
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translate(0, -50%);
+  display: block;
+  width: 1px;
+  height: 18px;
+  background: #dcdcdc;
+  content: '';
+}
+
+.mainInfo .go a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mainInfo .report {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.mainInfo .report a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.mainInfo .report span {
+  color: #dc3545;
+}
+
+/* --- 푸터 --- */
+
+.footer {
+  border-top: 1px solid #dcdcdc;
+  font-size: 14px;
+}
+
+.linkSection {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.linkSection .inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.linkSection .left ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.linkSection .left li ~ li::before {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: #dcdcdc;
+  transform: translate(-10px, 0);
+  content: '';
+}
+
+.linkSection .left a {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.linkSection .left ul strong {
+  font-weight: 500;
+  color: #dc3545;
+}
+
+.linkSection .right {
+  display: flex;
+  position: relative;
+}
+
+.linkSection .right .link_btn {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  padding: 10px;
+  border-left: 1px solid #dcdcdc;
+}
+
+.linkSection .right > div:last-child .link_btn {
+  border-right: 1px solid #dcdcdc;
+}
+
+.linkSection .right > div:last-child ul {
+  width: 180px;
+}
+
+.linkSection .right ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  transform: translate(0, -100%);
+  width: 181px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+}
+
+.linkSection .right .link_btn.on + ul {
+  display: block;
+}
+
+.linkSection .right li {
+  position: relative;
+}
+
+.linkSection .right li ~ li::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 150px;
+  height: 1px;
+  background: #dcdcdc;
+  content: '';
+}
+
+.linkSection .right ul a {
+  padding: 5px;
+}
+
+.footer-info .inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  font-size: 12px;
+}
+
+.footer-info .left p {
+  line-height: 20px;
+}
+
+.footer-info .left a {
+  display: inline-block;
+  color: blue;
+  margin: 0 2px;
+}
+
+.footer-info .right ul {
+  display: flex;
+  gap: 30px;
 }

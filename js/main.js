@@ -20,7 +20,10 @@ $(function () {
   $('.notice_tab .tab').click(function () {
     $(this).addClass('on').siblings().removeClass('on');
     var tabNum = $(this).index();
-    // $('.notice_con .content').eq(tabNum).addClass('on').siblings().removeClass('on');
     $(this).parent().next().find('.content').eq(tabNum).addClass('on').siblings().removeClass('on');
+  });
+
+  $('.link_btn').on('click', function () {
+    $(this).toggleClass('on');
   });
 });
